@@ -1,0 +1,6 @@
+In pratica io volevo filtrare il segnale audio, usando sempre una sliding window, ma senza eseguire la somma dei prodotti, ossia la convoluzione. 
+In pratica volevo ovviamente usare l'unica altra soluzione che rimane, ossia quella usando DFT. Con le sequenze, nel forzare una convoluzione circolare a diventare lineare, 
+è necessario fare qualche magheggio con le lunghezze delle frequenze. In pratica mi serviva sapere il numero di samples che avrei ottenuto, dato il numero di samples del filtro 
+era noto, tra le variabili di #define se ricorda. Ciò che vorrei che mi confermasse sarebbe questo: se N=#samples e N*Tc = dT con Tc=periodo di campionamento 
+che conosco, allora "dT" che è la larghezza della finestra temporale in cui eseguo tutto questo campionamento è quella ottenuta per misura di "output took" preso 
+tra l'inizio del while e la fine, una volta che vado in break
